@@ -52,16 +52,13 @@
         var dependencies = {
 
             user: commonDirectives.concat([
-            ]),
+            ]),            
             
             posts: [
+	            'controllers/FeedCtrl',
 	            'controllers/PostCtrl',
             	'directives/Posts'
             ],
-
-            feed: commonDirectives.concat([
-	            'controllers/FeedCtrl'
-            ])
         };
 
         var loadFn = function (dependencies) {
@@ -98,9 +95,6 @@
 		  templateUrl: '/partials/feed.html',
 		  url: '^/feed',
 		  abstract: true,
-		  resolve: {
-            load: loadFn(dependencies.feed)
-       	  }
 		});
 		
 		$stateProvider.state('index.feed.posts', {
