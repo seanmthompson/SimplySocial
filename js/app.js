@@ -17,7 +17,6 @@
     // create an angular app and inject dependencies
     var dependencies = [
         'ui.router',
-        'ui.bootstrap',
         'ngSanitize',
         'ngLoader'
     ];
@@ -46,6 +45,7 @@
         var commonDirectives = [
             'directives/Nav',
             'directives/Footer', 
+            'directives/AddComment',
             'controllers/IndexCtrl'           
         ];       
 

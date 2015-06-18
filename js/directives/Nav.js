@@ -1,13 +1,15 @@
 define([], function () {
     var directiveName = 'ssNavDir';
-    var fn = function ($http, $window, $timeout) {
+    var fn = function ($rootScope) {
         return {
             restrict: 'C',
             replace: true,
             scope: {},
             templateUrl: 'js/directives/Nav.html',
             link: function ($scope, element, attrs) {
-				console.log('Nav directive loaded');
+				$scope.AddComment = function() {
+					$rootScope.$broadcast('AddComment');
+				};
             }
         }
     };

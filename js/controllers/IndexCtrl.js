@@ -1,8 +1,6 @@
 define([], function () {
     var controllerName = 'ssIndexCtlr';
-    var fn = function () {
-        
-        console.log('index page loaded');
+    var fn = function ($rootScope, $scope) {                
     };
 
     angular.module('ssApp').lazy.controller(controllerName, fn);

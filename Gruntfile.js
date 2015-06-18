@@ -17,7 +17,7 @@ module.exports = function(grunt){
 						'js/libs/jquery/dist/jquery.js',
 						'js/libs/angular/angular.js',
 						'js/libs/angular-ui-router/release/angular-ui-router.js',
-						'js/libs/angular-bootstrap/ui-bootstrap-tpls.js',
+						'js/libs/bootstrap/dist/js/bootstrap.js',
 						'js/libs/angular-sanitize/angular-sanitize.js',
 						'js/libs/ng-loaders/ngLoader.js'
 					]
