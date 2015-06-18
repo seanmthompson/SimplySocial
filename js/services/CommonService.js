@@ -29,30 +29,28 @@ define(['libs/moment/moment'], function (moment) {
 
         var addLoadingClass = function () {
             $('body').addClass('rm-loading');
+            $rootScope.loading = true;
         };
 
         var removeLoadingClass = function () {
             $('body').removeClass('rm-loading');
+            $rootScope.loading = false;
         };
 
-        $rootScope.$on("$routeChangeStart", function (event, next, current) {
+        this.showProgress = function (container) {	        
             addLoadingClass();
-        });
-
-        $rootScope.$on("$routeChangeSuccess", function (event, next, current) {
-            removeLoadingClass();
-        });
-
-        this.showProgress = function (container) {
-            addLoadingClass(container, showSpinner);
         };
 
-        this.hideProgress = function () {
+        this.hideProgress = function () {	       
             removeLoadingClass();
         };
         
         this.formatTime = function(date) {
 	       return moment(date).fromNow(); 
+        };
+        
+        this.getRandomNumberInRange = function(min, max) {
+	    	return Math.floor(Math.random() * (max - min + 1)) + min;   
         };
 
 

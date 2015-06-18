@@ -19,6 +19,7 @@
         'ui.router',
         'ui.bootstrap',
         'ngSanitize',
+        'ngLoader'
     ];
 
     var app = angular.module('ssApp', dependencies, function () { });
