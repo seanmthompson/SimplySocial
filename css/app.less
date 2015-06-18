@@ -7,6 +7,145 @@
 @medium-green: #00b286;
 @dark-green: #007f60;
 
+@off-white: #f4f5f7;
+
 @lightest-gray: #dee1e5;
 @light-gray: #bec3cc;
+@medium-gray: #70767f;
 @base-gray: #70767f; 
+@dark-gray: #262728;
+@nav-gray: #4b4f54;
+
+
+//Tpyography 
+@font-size-base: 15px;
+@font-size-small: 12px;
+
+
+//Mixins
+.down-triangle(@size, @color) {
+	width: 0; 
+	height: 0; 
+	border-left: @size solid transparent;
+	border-right: @size solid transparent;	
+	border-top: @size solid @color;	
+}
+
+.up-triangle(@size, @color) {
+	width: 0; 
+	height: 0; 
+	border-left: @size solid transparent;
+	border-right: @size solid transparent;	
+	border-bottom: @size solid @color;
+}
+
+.border-radius(@radius: 4px) {
+	border-radius: @radius;
+}
+
+// Globabl tag styles 
+body {
+	color: @medium-gray;
+}
+
+a {
+	cursor: pointer;
+}
+
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+//Nav
+.navbar-inverse {
+	background: @dark-gray;
+	min-height: 60px;
+	
+	.icon {
+		padding: 18px 0 0;
+	}
+	
+	.user-dropdown {
+		position: relative;
+		padding-right: 20px;
+		cursor: pointer;
+		
+		.avatar {
+			padding: 12px 0 10px;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 30px;
+			margin-top: -5px;
+			.down-triangle(5px, @nav-gray);	
+		}
+		
+		&:hover {
+			.dropdown {
+				visibility: visible;
+			}
+		}
+		
+		.dropdown {
+			visibility: hidden;
+			position: absolute;
+			left: -25px;
+			top: 55px;
+			width: 95px;
+			padding: 5px 0;
+			.border-radius;
+			background: @off-white;
+			
+			li {
+				padding: 5px 20px;
+				line-height: @font-size-base;
+				border-bottom: 1px solid @lightest-gray;
+				
+				a {					
+					color: @medium-gray;					
+					font-size: @font-size-small;															
+				}
+				
+				&:last-child { 
+					border: 0;
+				}
+			}
+		
+			&:before {
+				content: '';
+				.up-triangle(6px, @off-white);	
+				position: absolute;
+				top: -6px;
+				right: 15px;
+			}
+		}
+	}
+}
+
+// Footer
+.footer {
+	border-top: 1px solid @lightest-gray;
+	.text-center;
+	.text-uppercase;
+	padding: 30px 0 0;
+	
+	ul {
+		margin: auto;
+		
+		li {
+			margin: 0 12px;
+			display: inline-block;
+			
+			a {
+				font-weight: bold;
+				color: @base-green;
+			}
+		}
+	}
+}

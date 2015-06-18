@@ -1,3 +1,9 @@
-<div data-ng-controller='ssPostCtlr'>
-	<h1>Test</h1>
+<div data-ng-controller='ssPostCtlr' class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<div ng-repeat="post in posts">
+				<p ng-bind-html="post.status"></p>
+			</div>
+		</div>
+	</div>
 </div>

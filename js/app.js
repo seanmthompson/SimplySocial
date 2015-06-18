@@ -44,36 +44,45 @@
 
         var commonDirectives = [
             'directives/Nav',
-            'directives/Hero',
-            'directives/Footer',
-            'controllers/IndexCtrl'
-        ];
+            'directives/Footer', 
+            'controllers/IndexCtrl'           
+        ];       
 
         var dependencies = {
 
+            index: commonDirectives.concat([
+            ]),
+            
             user: commonDirectives.concat([
-            ]),            
+            ]),
             
             posts: [
-	            'controllers/FeedCtrl',
 	            'controllers/PostCtrl',
             	'directives/Posts'
             ],
+
+            feed: [
+	            'controllers/FeedCtrl'
+            ]
         };
 
         var loadFn = function (dependencies) {
             return ['$q', '$rootScope', 'ssCommonService',
                 function ($q, $rootScope, ssCommonService) {
-	                ssCommonService.showProgress();	                
+	                console.log('in load fn ' + dependencies);
+	                
+	                //ssCommonService.showProgress();	                
 	                	                	                
                     var dependenciesLoaded = false;
 
                     var deferred = $q.defer();
                     var checkResolve = function() {
                         if (!dependenciesLoaded) { return; }
-						ssCommonService.hideProgress();	
+					//	ssCommonService.hideProgress();	
                         deferred.resolve();
                     };
+
+					
 
                     require(dependencies, function () {
                         dependenciesLoaded = true;                        
@@ -89,19 +98,25 @@
 		  templateUrl: '/partials/index.html',
 		  url: '/',
 		  abstract: true,
+		  resolve: {
+            load: loadFn(dependencies.index)
+       	  }
 		});
 		
 		$stateProvider.state('index.feed', {
 		  templateUrl: '/partials/feed.html',
 		  url: '^/feed',
 		  abstract: true,
+		  resolve: {
+            load: loadFn(dependencies.feed)
+       	  }
 		});
 		
 		$stateProvider.state('index.feed.posts', {
 		  templateUrl: '/partials/feed.posts.html',
 		  url: '/posts',
 		  resolve: {
-                load: loadFn(dependencies.posts)
+          	load: loadFn(dependencies.posts)
        	  }
 		});
 		
@@ -149,33 +164,6 @@
 
 		// feed.posts
 		// feed.photos
-
-/*
-        $routeProvider.when('/:country/:product/summary/:period/', {
-            templateUrl: rm.buildStaticUrl('partials/summary.html'),
-            resolve: {
-                load: loadFn(dependencies.summary)
-            }
-        });
-
-        $routeProvider.when('/:country/:product/details/:period/', {
-            templateUrl: rm.buildStaticUrl('partials/details.html'),
-            resolve: {
-                load: loadFn(dependencies.details)
-            }
-        });
-
-        $routeProvider.when('/index/', {
-            templateUrl: rm.buildStaticUrl('partials/index.html'),
-            resolve: {
-                load: loadFn(dependencies.index)
-            }
-        });
-
-        $routeProvider.otherwise({
-            redirectTo: '/index/'
-        });        
-*/
 		$urlRouterProvider.otherwise('/feed/posts');
 
     });

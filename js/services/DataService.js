@@ -1,5 +1,5 @@
 define([], function () {
-    var fn = function ($rootScope, $http, $q, rmCommonService) {
+    var fn = function ($rootScope, $http, $q, ssCommonService) {
         var self = this;
         
         var baseUrl = '/api/';
