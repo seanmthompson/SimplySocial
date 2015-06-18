@@ -1,5 +1,23 @@
-define([], function () {
+define(['libs/moment/moment'], function (moment) {
     var fn = function ($rootScope) {
+
+		moment.locale('en', {
+		    relativeTime : {
+		        future: "in %s",
+		        past:   "%s",
+		        s:  "s",
+		        m:  "a minute",
+		        mm: "%dm",
+		        h:  "1h",
+		        hh: "%dh",
+		        d:  "1d",
+		        dd: "%dd",
+		        M:  "1m",
+		        MM: "%dm",
+		        y:  "1y",
+		        yy: "%dy"
+		    }
+		});
 
         this.setPage = function (page) {
             document.title =  'SimplySocial - ' + page;
@@ -31,6 +49,10 @@ define([], function () {
 
         this.hideProgress = function () {
             removeLoadingClass();
+        };
+        
+        this.formatTime = function(date) {
+	       return moment(date).fromNow(); 
         };
 
 

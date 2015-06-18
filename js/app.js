@@ -127,8 +127,8 @@
 		});
 		
 		$stateProvider.state('index.feed.photos', {
-		  templateUrl: '/partials/feed.posts.html',
-		  url: '/posts',
+		  templateUrl: '/partials/feed.photos.html',
+		  url: '/photos',
 		  resolve: {
           	load: loadFn(dependencies.photos)
        	  }

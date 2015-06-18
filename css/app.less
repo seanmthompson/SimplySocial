@@ -17,6 +17,7 @@
 @medium-gray: #70767f;
 @base-gray: #70767f; 
 @dark-gray: #262728;
+@darkest-gray: #3f454d;
 @nav-gray: #4b4f54;
 
 
@@ -69,10 +70,16 @@ a {
 	&:hover {
 		color: @base-green;
 	}
+	
+	&:active, &:focus {
+		outline: 0;
+		text-decoration: none;
+	}
 }
 
 .title {
 	font-size: @font-size-title;
+	color: @darkest-gray;
 	line-height: @line-height-title;
 }
 
@@ -264,13 +271,14 @@ ul.unstyled {
 					margin: 0 10px 0 0;
 					
 					a {
-						color: @white;
+						color: @light-gray;
 						border-bottom: 4px solid transparent;
 						padding: 0 15px 15px;
 						font-size: @font-size-xsmall;
 						letter-spacing: 1px;
 						
 						&.active {
+							color: @white;
 							border-bottom: 4px solid @base-green;
 						}
 						
@@ -324,6 +332,22 @@ ul.unstyled {
 			.status-text {
 				margin: 0;
 			}			
+		}
+	}
+	
+	&.photo-status {
+		.actions {
+			padding: 20px;
+			
+			img {
+				cursor: pointer; 
+			}
+			
+			img, p {
+				margin: 0 10px;
+				line-height: @font-size-small;
+				color: @light-gray;
+			}
 		}
 	}
 }
