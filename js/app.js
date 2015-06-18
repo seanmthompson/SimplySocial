@@ -56,14 +56,20 @@
             user: commonDirectives.concat([
             ]),
             
+            feed: [
+	            'controllers/FeedCtrl'
+            ],
+            
             posts: [
 	            'controllers/PostCtrl',
             	'directives/Posts'
             ],
 
-            feed: [
-	            'controllers/FeedCtrl'
+			photos: [
+	            'controllers/PhotosCtrl',
+	            'directives/Photos'
             ]
+            
         };
 
         var loadFn = function (dependencies) {
@@ -117,6 +123,14 @@
 		  url: '/posts',
 		  resolve: {
           	load: loadFn(dependencies.posts)
+       	  }
+		});
+		
+		$stateProvider.state('index.feed.photos', {
+		  templateUrl: '/partials/feed.posts.html',
+		  url: '/posts',
+		  resolve: {
+          	load: loadFn(dependencies.photos)
        	  }
 		});
 		

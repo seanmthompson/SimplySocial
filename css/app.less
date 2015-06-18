@@ -2,7 +2,10 @@
 @import "../js/libs/bootstrap/less/bootstrap.less";
 
 //Color definitions
+@white: #ffffff;
+@white-opacity: rgba(245, 245, 245, 0.5);
 @base-green: #00cc99;
+@base-green-opacity: rgba(0, 178, 134, 0.7);
 @light-green: #4cffd2;
 @medium-green: #00b286;
 @dark-green: #007f60;
@@ -18,9 +21,17 @@
 
 
 //Tpyography 
+@font-family-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 @font-size-base: 15px;
-@font-size-small: 12px;
+@font-size-small: 14px;
+@font-size-xsmall: 12px;
+@font-size-title: 16px;
+@font-size-large: 30px;
 
+@line-height-title: 18px;
+
+@font-weight-bold: 600;
+@font-weight-light: 300;
 
 //Mixins
 .down-triangle(@size, @color) {
@@ -45,11 +56,28 @@
 
 // Globabl tag styles 
 body {
+	font-family: @font-family-sans-serif;
+	font-size: @font-size-base;
+	line-height: @line-height-base;
 	color: @medium-gray;
 }
 
 a {
 	cursor: pointer;
+	color: @light-gray;
+	
+	&:hover {
+		color: @base-green;
+	}
+}
+
+.title {
+	font-size: @font-size-title;
+	line-height: @line-height-title;
+}
+
+p.small {
+	font-size: @font-size-small;
 }
 
 ul.unstyled {
@@ -63,6 +91,7 @@ ul.unstyled {
 .navbar-inverse {
 	background: @dark-gray;
 	min-height: 60px;
+	margin: 0;
 	
 	.icon {
 		padding: 18px 0 0;
@@ -98,7 +127,7 @@ ul.unstyled {
 			left: -25px;
 			top: 55px;
 			width: 95px;
-			padding: 5px 0;
+			overflow: hidden;
 			.border-radius;
 			background: @off-white;
 			
@@ -133,7 +162,8 @@ ul.unstyled {
 	border-top: 1px solid @lightest-gray;
 	.text-center;
 	.text-uppercase;
-	padding: 30px 0 0;
+	padding: 30px 0 30px;
+	margin: 100px 0 0;
 	
 	ul {
 		margin: auto;
@@ -141,11 +171,159 @@ ul.unstyled {
 		li {
 			margin: 0 12px;
 			display: inline-block;
+			font-size: @font-size-xsmall;
+			font-weight: @font-weight-bold;
 			
-			a {
-				font-weight: bold;
+			a {				
 				color: @base-green;
 			}
+		}
+	}
+}
+
+
+// Index
+.index-ui-view {
+	margin: 60px 0 0;
+}
+
+
+// Hero
+.hero {
+	background: url(../img/assets/hero.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 125px 0 150px;
+	margin: 0 0 20px;
+	position: relative;
+	
+	.status-update {
+		background: @base-green-opacity;
+		padding: 25px; 
+		.border-radius;
+		overflow: hidden;
+		
+		input {
+			background: none;
+			border: 0;
+			margin: 15px 0 30px;
+			color: @white;			
+			font-size: @font-size-large;
+			font-weight: @font-weight-light;
+			
+			&::-webkit-input-placeholder{
+				color:@white-opacity;
+			}
+			
+			&:-moz-placeholder {
+				color: @white-opacity;  
+			}
+			
+			&::-moz-placeholder {
+				color: @white-opacity;  
+			}
+			
+			&:-ms-input-placeholder {  
+				color: @white-opacity;  
+			}
+			
+			&:focus {
+				outline: 0;
+			}
+		}
+		
+		.actions {
+			.add-photo, .add-video {
+				margin-right: 15px;
+				opacity: 0.5;
+			}
+			
+			img, p {
+				color: @white;
+				display: inline-block;
+				margin-right: 10px;
+				font-weight: @font-weight-light;
+				font-size: @font-size-small;
+			}
+		}
+	}
+	
+	.hero-nav-container {
+		position: absolute;
+		bottom: 3px;
+		left: 0;
+		width: 100%;
+		
+		.hero-nav {
+			ul {
+				.text-uppercase;
+				font-weight: @font-weight-bold;
+				
+				li {
+					display: inline-block;
+					padding: 0 15px 15px 0;
+					margin: 0 10px 0 0;
+					
+					a {
+						color: @white;
+						border-bottom: 4px solid transparent;
+						padding: 0 15px 15px;
+						font-size: @font-size-xsmall;
+						letter-spacing: 1px;
+						
+						&.active {
+							border-bottom: 4px solid @base-green;
+						}
+						
+						&:hover {
+							text-decoration: none;
+							border-bottom: 4px solid @base-green;
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+// Status box
+.status {
+	margin: 30px 0 0;
+	border: 1px solid @lightest-gray;
+	.border-radius(6px);
+	overflow: hidden;
+
+	.wrap {
+		padding: 25px;
+
+		.avatar {
+			.border-radius(3px);
+		}
+		
+		.content {
+			width: 200px;
+			width: -webkit-calc(~"100% - 55px");
+			width: -moz-calc(~"100% - 55px");
+			width: calc(~"100% - 55px");
+			
+			.username, .actions {
+				width: 50%;
+			}
+			
+			.actions {
+				img {
+					cursor: pointer; 
+				}
+				
+				img, p {
+					margin: 0 10px;
+					line-height: @font-size-small;
+					color: @light-gray;
+				}
+			}
+			
+			.status-text {
+				margin: 0;
+			}			
 		}
 	}
 }
