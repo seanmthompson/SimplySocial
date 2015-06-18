@@ -10,11 +10,7 @@ define([], function (moment) {
 		        $scope.posts = posts.data;
 		         ssCommonService.hideProgress();
 		    }, ssCommonService.getRandomNumberInRange(200, 3000));
-    	});
-    	
-    	$scope.fromNow = function(date) {
-	    	return ssCommonService.formatTime(date);
-    	}         		
+    	});    	    	        		
     };
 
     angular.module('ssApp').lazy.controller(controllerName, fn);

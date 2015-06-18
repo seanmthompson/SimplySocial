@@ -9,13 +9,13 @@ var allPosts = [
 		type: "status",
 		comments: [
 			{
-				username: 'Jed Bridges',
+				userName: 'Jed Bridges',
 				userAvatar: 'img/users/jed.jpg',
 				comment: 'Great way to start the week. Thanks for sharing!',
 				timeCreated: generateRandomTime()
 			},
 			{
-				username: 'Ren Walker',
+				userName: 'Ren Walker',
 				userAvatar: 'img/users/ren.jpg',
 				comment: 'Feeling inspired now... thanks for the great articlce <a href="@designmodo">@designmodo!</a>',
 				timeCreated: generateRandomTime()

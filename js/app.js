@@ -63,7 +63,8 @@
             
             posts: [
 	            'controllers/PostCtrl',
-            	'directives/Posts'
+            	'directives/Posts',
+            	'directives/Status'
             ],
 
 			photos: [

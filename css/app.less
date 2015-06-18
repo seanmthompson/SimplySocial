@@ -334,6 +334,53 @@ ul.unstyled {
 				margin: 0;
 			}			
 		}
+		
+		.comments-link {
+			font-size: @font-size-xsmall;
+			color: @light-gray;
+			margin: 20px 0 0;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			padding-right: 10px;
+			
+			&:after {
+				content: '';
+				top: 50%;
+				margin: -3px 0 0;
+				position: absolute;
+				right: -10px;
+				.down-triangle(5px, @light-gray)
+			}
+			
+			&.active:after {
+				border-top: 0;
+				.up-triangle(5px, @light-gray)
+			}
+		}
+	}
+	
+	.comments-wrap {
+		background: @off-white;		
+		border-top: 1px solid @lightest-gray;
+		
+		.comment {
+			border-bottom: 1px solid @lightest-gray;
+		}
+		
+		.reply-input {
+			width: 100%;
+			.border-radius;
+			height: 40px;
+			padding: 5px 10px;
+			font-size: @font-size-small;
+			border: 1px solid @lightest-gray;
+		}
+		
+		&.reply-wrap {
+			border: 0;
+			padding: 25px;
+		}
 	}
 	
 	&.photo-status {

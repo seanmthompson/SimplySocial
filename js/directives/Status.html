@@ -1,1 +1,45 @@
-<p ng-bind-html="post.status"></p>
+<div class="status">
+	<div class="wrap">
+		<div class="pull-left">
+			<img class="avatar" ng-src="{{post.userAvatar}}" width="40" />
+		</div>	
+		<div class="content pull-right">
+			<p class="pull-left title username">{{ post.userName }}</p>
+			<div class="actions pull-right text-right">
+				<p class="pull-right small">{{ fromNow(post.timeCreated) }}</p>
+				<img class="pull-right" src="img/assets/icons/like.png" width="13" />
+				<img class="pull-right" src="img/assets/icons/reply.png" width="13" />														
+			</div>	
+			<div class="clearfix"></div>
+			<p class="status-text" ng-bind-html="post.status"></p>
+			<p class="small comments-link" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">Collapse<p>	
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<img class="attachment img-responsive" ng-if="post.attachment" ng-src="{{post.attachment}}" />	
+	
+	<div class="comments-wrap" ng-show="expandComments" ng-if="post.comments.length">
+		<div class="comment" ng-repeat="comment in post.comments">
+			<div class="wrap">
+				<div class="pull-left">
+					<img class="avatar" ng-src="{{comment.userAvatar}}" width="40" />
+				</div>	
+				<div class="content pull-right">
+					<p class="pull-left title username">{{ comment.userName }}</p>
+					<div class="actions pull-right text-right">
+						<p class="pull-right small">{{ fromNow(comment.timeCreated) }}</p>
+						<img class="pull-right" src="img/assets/icons/like.png" width="13" />
+						<img class="pull-right" src="img/assets/icons/reply.png" width="13" />														
+					</div>	
+					<div class="clearfix"></div>
+					<p class="status-text" ng-bind-html="comment.comment"></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="comments-wrap reply-wrap" ng-show="expandComments" ng-if="post.comments.length">
+		<input type="text" class="reply-input" placeholder="Reply..." />
+	</div>
+	
+</div>
