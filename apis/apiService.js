@@ -404,6 +404,32 @@ var userFollowing = [
 	}				
 ];
 
+var userSettings = {
+	firstName: 'Jessica',
+	lastName: 'Tuan',
+	fullName: 'Jessica Tuan',
+	email: 'jessica@mail.com',
+	avatar: 'img/users/jessica.jpg',
+	passwordHash: '#45df3s@',
+	notifications: {
+		postsMarkedAsFavorite: true,
+		emailWhenMentioned: true,
+		emailMeWhenReply: true,
+		emailWhenFollow: true
+	},
+	privacy: {
+		tags: {
+			anyone: true,
+			followers: false,
+			anyone: false
+		},
+		locations: true,
+		findMeByEmail: true,
+		tailorAds: true
+		
+	}
+}
+
 exports.getAllPosts = function(){
     return allPosts;
 };

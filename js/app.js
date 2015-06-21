@@ -67,6 +67,10 @@
 	            'directives/Follower',
             ]),
             
+            settings: commonDirectives.concat([
+	            'controllers/SettingsCtrl'
+            ]),
+            
             feed: [
 	            'controllers/FeedCtrl'
             ],
@@ -186,9 +190,9 @@
        	  }
 		});
 		
-		$stateProvider.state('index.user.settings', {
-		  templateUrl: '/partials/feed.html',
-		  url: '/followers',
+		$stateProvider.state('index.settings', {
+		  templateUrl: '/partials/settings.html',
+		  url: '^/settings',
 		  resolve: {
                 load: loadFn(dependencies.settings)
        	  }

@@ -32,6 +32,7 @@
 @line-height-title: 18px;
 
 @font-weight-bold: 600;
+@font-weight-semibold: 400;
 @font-weight-light: 300;
 
 //Mixins
@@ -597,6 +598,78 @@ ul.unstyled {
 		}	
 	}
 }
+
+.settings {
+	
+	h2 {
+		margin: 60px 0 0;
+		color: @darkest-gray;
+		font-weight: @font-weight-light;
+	}
+	
+	.account-settings {
+		margin: 35px 0 0;
+		border-bottom: 1px solid @lightest-gray;
+		padding: 0 0 25px;
+		
+		img {
+			width: 100%;
+			height: auto;
+			margin: 0 0 10px;
+		}				
+		
+		h3 {
+			text-transform: uppercase;
+			font-size: @font-size-xsmall;
+			font-weight: @font-weight-bold;
+			margin-bottom: 20px;
+		}
+		
+		.btn {
+			color: @light-gray;
+			font-size: @font-size-xsmall;
+			padding: 3px;
+		}
+		
+		.form-control {
+			background-size: 16px auto;
+			background-repeat: no-repeat;
+			background-position: 10px 11px;
+			height: 40px;
+			margin: 0 0 25px;
+			padding: 0 10px 0 40px;
+			
+			&.username {
+				background-image: url(../img/assets/icons/user.png);
+			}
+			
+			&.email {
+				background-image: url(../img/assets/icons/email.png);
+			}
+			
+			&.password {
+				background-image: url(../img/assets/icons/lock.png);
+			}
+			
+			&:disabled {
+				background-color: transparent;
+				color: @light-gray;
+			}						
+		}
+		
+		.password-wrap {
+			position: relative;
+			
+			.change-password {
+				position: absolute;
+				right: 20px;
+				top: 8px;
+				border: 0;
+			}
+		}
+	}	
+}
+
 
 .modal-backdrop.in {
 	opacity: 0.8;
