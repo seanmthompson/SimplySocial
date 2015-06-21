@@ -6,7 +6,7 @@ define(['libs/moment/moment'], function (moment) {
 		        future: "in %s",
 		        past:   "%s",
 		        s:  "s",
-		        m:  "a minute",
+		        m:  "1m",
 		        mm: "%dm",
 		        h:  "1h",
 		        hh: "%dh",

@@ -119,6 +119,8 @@ ul.unstyled {
 	}
 	
 	.form-group {
+		margin-top: 15px;
+		padding: 0 15px;
 		position: relative;
 		
 		input.form-control {
@@ -129,8 +131,8 @@ ul.unstyled {
 		}	
 		
 		.icon-search {
-			top: -4px;
-			right: 10px;
+			top: -10px;
+			right: 25px;
 			position: absolute;
 			cursor: pointer;	
 		}
@@ -396,6 +398,8 @@ ul.unstyled {
 	
 	.attachment {
 		cursor: pointer;
+		width: 100%;		
+		height: auto;
 	}
 	
 	.comments-wrap {
@@ -518,3 +522,7 @@ ul.unstyled {
 .modal-backdrop.in {
 	opacity: 0.8;
 }
+
+
+//Import responsive style sheets
+@import "768.less";

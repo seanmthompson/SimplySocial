@@ -63,7 +63,6 @@
             
             posts: [
 	            'controllers/PostCtrl',
-            	'directives/Posts',
             	'directives/Status',
             	'directives/PhotoModal'
             ],

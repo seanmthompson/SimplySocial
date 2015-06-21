@@ -58,7 +58,7 @@ var allPosts = [
 	},
 	{
 		userName: 'Jenny Shen',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/jenny.jpg',
 		status: 'Perfect day to be taking pictures  <a href="http://instagram.com/p/mV0PNrHRwQ/">instagram.com/p/mV0PUrHRwQ/</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -67,7 +67,7 @@ var allPosts = [
 	},	
 	{
 		userName: 'Buzz Usborne',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/buzz.jpg',
 		status: 'Road trip!  <a href="http://bit.ly/1hkXFdK">bit.ly/1hkXFdK</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -76,7 +76,7 @@ var allPosts = [
 	},
 	{
 		userName: 'Ryan O. Hicks',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/ryan.jpg',
 		status: '<a href="http://bit.ly/1hkXFdK">bit.ly/1hkXFdK</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -85,16 +85,16 @@ var allPosts = [
 	},	
 	{
 		userName: 'Chloe Park',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/chloe.jpg',
 		status: 'Time to take a break!  <a href="http://instagram.com/p/mlL0B3Mi78/">instagram.com/p/mlL0B3Mi78/</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
-		attachment: 'img/photos/ryan.jpg',
+		attachment: 'img/photos/chloe.jpg',
 		comments: []
 	},	
 	{
 		userName: 'Jonathan Moreira',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/jonathan.jpg',
 		status: 'Work  <a href="http://bit.ly/3geWBiU">bit.ly/3geWBiU</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -103,7 +103,7 @@ var allPosts = [
 	},	
 	{
 		userName: 'Lindsey Smith',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/lindsey.jpg',
 		status: 'Met this little guy on my morning commute  <a href="http://instagram.com/p/1jdt42s">instagram.com/p/1jdt42s</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -112,7 +112,7 @@ var allPosts = [
 	},	
 	{
 		userName: 'Marco Sousa',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/marco.jpg',
 		status: '<a href="http://instagram.com/p/j5dkr61d/">instagram.com/p/j5dkr61d/</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",
@@ -121,7 +121,7 @@ var allPosts = [
 	},	
 	{
 		userName: 'Lauren Gray',
-		userAvatar: 'img/users/meg.jpg',
+		userAvatar: 'img/users/lauren.jpg',
 		status: 'The best way to get to the office... I love my new board!   <a href="http://instagram.com/p/mlLjgmw3dc/">instagram.com/p/mlLjgmw3dc/</a>',
 		timeCreated:  generateRandomTime(),
 		type: "photo",

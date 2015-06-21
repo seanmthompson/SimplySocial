@@ -6,27 +6,29 @@
 	      <img src="img/assets/logo.png" width="150" alt="simply social" />
       </a>
     </div>
-    
-    <div class="navbar-right user-dropdown">
-	    <img class="icon avatar" src="img/assets/avatar.png" />
-	    
-	    <ul class="dropdown unstyled">
-		    <li><a ui-sref="user.profile">Profile</a></li>
-		    <li><a ui-sref="user.followers">Followers</a></li>
-		    <li><a ui-sref="user.following">Following</a></li>
-		    <li><a ui-sref="user.settings">Settings</a></li>
-	    </ul>
-    </div>
 
-	<form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control">
-          <input type="image" class="icon icon-search" src="img/assets/icons/search.png" width="16" />
-        </div>        
-    </form>
-
-	<div class="navbar-right">
-		<img class="pull-left icon" ng-click="AddComment()" src="img/assets/icons/add-comment.png" width="31" />
+	<div class="navbar-right">    
+	    <div class="user-dropdown pull-right">
+		    <img class="icon avatar" src="img/assets/avatar.png" />
+		    
+		    <ul class="dropdown unstyled">
+			    <li><a ui-sref="user.profile">Profile</a></li>
+			    <li><a ui-sref="user.followers">Followers</a></li>
+			    <li><a ui-sref="user.following">Following</a></li>
+			    <li><a ui-sref="user.settings">Settings</a></li>
+		    </ul>
+	    </div>
+	
+		<form class="search-form pull-right" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control">
+	          <input type="image" class="icon icon-search" src="img/assets/icons/search.png" width="16" />
+	        </div>        
+	    </form>
+	
+		<div class="pull-right">
+			<img class="pull-left icon" ng-click="AddComment()" src="img/assets/icons/add-comment.png" width="31" />
+		</div>
 	</div>
     
   </div>

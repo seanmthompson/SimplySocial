@@ -5,7 +5,7 @@ define([], function () {
             restrict: 'C',
             replace: true,
             scope: { post: '=' },
-            templateUrl: 'js/directives/Status.html',
+            templateUrl: 'js/directives/Photo.html',
             link: function ($scope, element, attrs) {
 	            $scope.expandComments = false;
 	            
