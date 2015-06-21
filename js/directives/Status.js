@@ -11,6 +11,7 @@ define([], function () {
 	            
 	            $scope.toggleComments = function() {
 		           $scope.expandComments = !$scope.expandComments; 
+		           $scope.$emit('isoRelayout');
 	            }
 	            
 	            $scope.fromNow = function(date) {

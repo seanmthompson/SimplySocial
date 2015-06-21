@@ -35,13 +35,6 @@
             service: $provide.service
         };
 
-/*
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
-*/
-
         var commonDirectives = [
             'directives/Nav',
             'directives/Footer', 
@@ -55,6 +48,13 @@
             ]),
             
             user: commonDirectives.concat([
+	            'controllers/UserCtrl'
+            ]),
+            
+            profile: commonDirectives.concat([
+	            'controllers/UserProfileCtrl',
+	            'directives/Status',
+	            'directives/PhotoModal'
             ]),
             
             feed: [
@@ -63,7 +63,9 @@
             
             posts: [
 	            'controllers/PostCtrl',
+	            'directives/Posts',
             	'directives/Status',
+            	'directives/Photo',
             	'directives/PhotoModal'
             ],
 
@@ -139,10 +141,10 @@
 		});
 		
 
-/*
+
 		$stateProvider.state('index.user', {
 		  templateUrl: '/partials/user.html',
-		  url: '/user',
+		  url: '^/user',
 		  abstract: true,
 		  resolve: {
                 load: loadFn(dependencies.user)
@@ -150,38 +152,38 @@
 		});
 
 		
-		$stateProvider.state('index.user.all', {
-		  templateUrl: '/partials/user.all.html',
-		  url: '/all',
+		$stateProvider.state('index.user.profile', {
+		  templateUrl: '/partials/user.profile.html',
+		  url: '/profile',
 		  resolve: {
-			  load: loadFn(dependencies.userAll)
+			  load: loadFn(dependencies.profile)
 		  }
 		});
 		
-		$stateProvider.state('index.feed', {
+		$stateProvider.state('index.user.followers', {
 		  templateUrl: '/partials/feed.html',
-		  url: '/feed',
-		  abstract: true,
+		  url: '/followers',
 		  resolve: {
-                load: loadFn(dependencies.feed)
+                load: loadFn(dependencies.followers)
        	  }
 		});
-*/
-
-		//abstract: index
-
-		//abstract: index.user controller
 		
-		// user.profile
-		// user.followers
-		// user.following
-		// user.settings
+		$stateProvider.state('index.user.following', {
+		  templateUrl: '/partials/feed.html',
+		  url: '/followers',
+		  resolve: {
+                load: loadFn(dependencies.following)
+       	  }
+		});
 		
-		
-		//abstract: index.feed 
+		$stateProvider.state('index.user.settings', {
+		  templateUrl: '/partials/feed.html',
+		  url: '/followers',
+		  resolve: {
+                load: loadFn(dependencies.settings)
+       	  }
+		});
 
-		// feed.posts
-		// feed.photos
 		$urlRouterProvider.otherwise('/feed/posts');
 
     });

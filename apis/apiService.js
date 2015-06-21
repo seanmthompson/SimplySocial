@@ -131,6 +131,80 @@ var allPosts = [
 		
 ];
 
+var userProfile = {
+	firstName: 'Jessica',
+	lastName: 'Tuan',
+	avatar: 'img/users/jessica.jpg',
+	description: 'Designer and Developer living in San Diego, CA',
+	website: 'jessicatuan.com',
+	followers: 2542,
+	following: 517		
+};
+
+var userFeed = [
+	{
+		userName: 'Jessica Tuan',
+		userAvatar: 'img/users/jessica.jpg',
+		status: 'It\'s Monday. That means @happymonday podcast time. <a href="http://bit.ly/1hxqkGO">http://bit.ly/1hxqkGO</a> Good stuff for web workers.',
+		timeCreated:  generateRandomTime(),
+		type: "status",
+		comments: []
+	},	
+	{
+		userName: 'Jessica Tuan',
+		userAvatar: 'img/users/jessica.jpg',
+		status: 'The theme song of small creative shops around the world. <a href="http://goo.gl/eFUAzP">http://goo.gl/eFUAzP</a>',
+		timeCreated:  generateRandomTime(),
+		type: "status",
+		comments: []
+	},
+	{
+		userName: 'Pallavi Gupta',
+		userAvatar: 'img/users/lindsey.jpg',
+		status: 'Need some reading? 11 free ebooks for designers | Creative Bloq <a href="http://bit.ly/1lE5QDM">bit.ly/1lE5QDM</a> via <a href="#">@netmag</a>',
+		timeCreated:  generateRandomTime(),
+		type: "status",		
+		comments: [],
+		liked: true
+	},
+	{
+		userName: 'Pallavi Gupta',
+		userAvatar: 'img/users/jessica.jpg',
+		status: 'Nothing like a walk on the beach to clear your mind <a href="#">instagram.com/p/mV0PUrHRwQ/</a>',
+		timeCreated:  generateRandomTime(),
+		type: "photo",
+		attachment: 'img/photos/lindsey.jpg',
+		comments: []
+	},
+	{
+		userName: 'Jessica Tuan',
+		userAvatar: 'img/users/jessica.jpg',
+		status: '"...creative people are confident in only one thing: their own doubt.” - <a href="#">@johnmaeda</a> on doubt and hope: <a href="#">bit.ly/21E34FGM</a>',
+		timeCreated:  generateRandomTime(),
+		type: "status",
+		comments: []
+	},
+	{
+		userName: 'Jessica Tuan',
+		userAvatar: 'img/users/jessica.jpg',
+		status: 'Don\'t let yourself be controlled by three things: People, money and your past experiences. <a href="#">#lifelessons</a>',
+		timeCreated:  generateRandomTime(),
+		type: "status",
+		comments: []
+	},	
+	{
+		userName: 'Buzz Usborne',
+		userAvatar: 'img/users/jenny.jpg',
+		status: 'Road trip!  <a href="#">bit.ly/1hkXFdK</a>',
+		timeCreated:  generateRandomTime(),
+		type: "photo",
+		attachment: 'img/photos/buzz.jpg',
+		comments: [],
+		liked: true
+	},						
+	
+];
+
 exports.getAllPosts = function(){
     return allPosts;
 };
@@ -142,8 +216,12 @@ exports.getPhotoFeed = function(){
     return photosArr;
 };
 
+exports.getUserProfile = function() {
+	return userProfile;	
+};
+
 exports.getUserFeed = function(){
-    return allPosts;
+    return userFeed;
 };
 
 exports.getUserFollowers = function(){

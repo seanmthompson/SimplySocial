@@ -24,10 +24,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="hero-nav col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-						<ul class="unstyled">
+						<ul class="unstyled pull-left">
 							<li><a ui-sref-active="active" ui-sref="index.feed.posts">All Posts</a></li>
 							<li><a ui-sref-active="active" ui-sref="index.feed.photos">Photos</a></li>
 							<li><a ui-sref-active="active" href="#">Videos</a></li>
+						</ul>
+						<ul class="unstyled toggle-list-view pull-right">
+							<li ng-click="setViewMode('list')">
+								<img src="img/assets/icons/list.png" />								
+							</li>
+							<li ng-click="setViewMode('grid')">
+							<img src="img/assets/icons/grid.png" />
+							</li>
 						</ul>
 					</div>
 				</div>

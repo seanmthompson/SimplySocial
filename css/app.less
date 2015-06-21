@@ -291,6 +291,25 @@ ul.unstyled {
 		}
 	}
 	
+	.user-profile-box {
+		font-weight: @font-weight-light;
+		text-align: center;
+		color: @white;
+		
+		h2 {
+			margin: 15px 0;
+			font-weight: @font-weight-light;
+		}
+		
+		p {
+			margin: 0 0 5px;
+		}
+		
+		a {
+			color: @dark-gray;
+		}
+	}
+	
 	.hero-nav-container {
 		position: absolute;
 		bottom: 3px;
@@ -324,6 +343,13 @@ ul.unstyled {
 							border-bottom: 4px solid @base-green;
 						}
 					}
+				}
+			}
+			
+			.toggle-list-view {
+				li {
+					margin: 0;
+					cursor:pointer;
 				}
 			}
 		}
@@ -368,31 +394,41 @@ ul.unstyled {
 			
 			.status-text {
 				margin: 0;
-			}			
-		}				
+			}	
+			
+			.like {
+				font-size: @font-size-xsmall;
+				color: @base-green;
+				margin: 20px 0 0;
+				
+				img {
+					margin-right: 5px;
+				}
+			}		
+		}						
+	}
+	
+	.comments-link {
+		font-size: @font-size-xsmall;
+		color: @light-gray;
+		margin: 20px 0 0;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		padding-right: 10px;
 		
-		.comments-link {
-			font-size: @font-size-xsmall;
-			color: @light-gray;
-			margin: 20px 0 0;
-			cursor: pointer;
-			display: inline-block;
-			position: relative;
-			padding-right: 10px;
-			
-			&:after {
-				content: '';
-				top: 50%;
-				margin: -3px 0 0;
-				position: absolute;
-				right: -10px;
-				.down-triangle(5px, @light-gray)
-			}
-			
-			&.active:after {
-				border-top: 0;
-				.up-triangle(5px, @light-gray)
-			}
+		&:after {
+			content: '';
+			top: 50%;
+			margin: -3px 0 0;
+			position: absolute;
+			right: -10px;
+			.down-triangle(5px, @light-gray)
+		}
+		
+		&.active:after {
+			border-top: 0;
+			.up-triangle(5px, @light-gray)
 		}
 	}
 	

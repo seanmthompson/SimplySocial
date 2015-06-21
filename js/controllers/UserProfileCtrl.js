@@ -1,9 +1,10 @@
 define([], function () {
-    var controllerName = 'ssUserCtlr';
+    var controllerName = 'ssUserProfileCtlr';
     var fn = function ($rootScope, $scope, ssCommonService, ssDataService) {
-		ssDataService.getUserProfile().then(function(profile) {
-			$scope.user = profile.data;	
-		});  	    	
+	    	    
+		ssDataService.getUserFeed().then(function(posts) {
+			$scope.posts = posts.data;
+		});
     };
 
     angular.module('ssApp').lazy.controller(controllerName, fn);

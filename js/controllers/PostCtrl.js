@@ -7,8 +7,8 @@ define([], function (moment) {
     	ssDataService.getAllPosts().then(function(posts) { 	 
 	    	// just mocking a slow repsonse from server   	
 		    $timeout(function() {
-		        $scope.posts = posts.data;
-		         ssCommonService.hideProgress();
+		        ssCommonService.hideProgress();
+				$scope.$broadcast('PostsLoaded', posts.data);
 		    }, ssCommonService.getRandomNumberInRange(200, 3000));
     	});    	    	        		
     };

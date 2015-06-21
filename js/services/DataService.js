@@ -12,6 +12,10 @@ define([], function () {
 	        return $http.get(baseUrl + 'photoFeed');
         };
         
+         this.getUserProfile = function() {
+	        return $http.get(baseUrl + 'userProfile');
+        };
+        
         this.getUserFeed = function() {
 	        return $http.get(baseUrl + 'userFeed');
         };

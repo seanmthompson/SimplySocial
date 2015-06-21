@@ -12,6 +12,9 @@
 			</div>	
 			<div class="clearfix"></div>
 			<p class="status-text" ng-bind-html="post.status"></p>
+			<p class="like" ng-if="post.liked">
+				<img src="img/assets/icons/heart.png" width="13" /> Liked				
+			</p>
 			<p class="small comments-link" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">Collapse<p>	
 		</div>
 		<div class="clearfix"></div>

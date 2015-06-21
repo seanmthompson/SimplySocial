@@ -23,6 +23,10 @@ app.get('/api/photoFeed', function(request, response){
     response.send(appService.getPhotoFeed());
 });
 
+app.get('/api/userProfile', function(request, response){
+    response.send(appService.getUserProfile());
+});
+
 app.get('/api/userFeed', function(request, response){
     response.send(appService.getUserFeed());
 });

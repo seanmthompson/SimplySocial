@@ -1,19 +1,36 @@
 define([], function (moment) {
-    var directiveName = 'ssPhotosDir';
+    var directiveName = 'ssPostsDir';
     var fn = function ($timeout, ssDataService, ssCommonService) {
         return {
             restrict: 'C',
             replace: true,
             scope: {},
-            templateUrl: 'js/directives/Photos.html',
+            templateUrl: 'js/directives/Posts.html',
             link: function ($scope, element, attrs) {
 	            var gridEl = element[0];
-	            	            
-	            $scope.$on('PhotosLoaded', function(evt, posts) {
+	            $scope.currentViewMode = 'list';
+	            	            	            
+	            $scope.$on('PostsLoaded', function(evt, posts) {
 		            $scope.posts = posts;
-		            initIsotope();
 	            })
 	            
+	            $scope.$on('grid', function() {
+		            $scope.currentViewMode = 'grid';
+		            initIsotope();
+	            });
+	            
+	            $scope.$on('list', function() {
+		            $scope.currentViewMode = 'list';
+		            destroyIsotope(); 
+	            });
+	            
+	            $scope.$on('isoRelayout', function() {
+		        	if(iso) {
+			        	iso.reloadItems(); 
+		        	} else {
+			        	initIsotope();	
+		        	}		           		           
+	            });
 	            	            	            	            	           			    	
 		    	$scope.fromNow = function(date) {
 			    	return ssCommonService.formatTime(date);
@@ -27,14 +44,16 @@ define([], function (moment) {
 							itemSelector: '.item'
 						});
 					});
-                };                
+                };
     			    			
+    			var destroyIsotope = function() {
+	    			if(iso) {
+	                 	iso.destroy();   
+                    }; 	
+    			}; 			
 	            
 	            $scope.$on('$destroy', function (e, data) {
-                    // unbind the event listeners
-                    if(iso) {
-	                 	iso.destroy();   
-                    };                    
+                    destroyIsotope();                   
                 });
 	            
             }
