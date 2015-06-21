@@ -205,6 +205,205 @@ var userFeed = [
 	
 ];
 
+var userFollowers = [
+	{
+		username: 'Samihah Azim',
+		avatar: 'img/users/meg.jpg',
+		posts: 12832,
+		followers: 18779, 
+		following: 5890, 
+		follow: true
+	},
+	{
+		username: 'Jon Brenne',
+		avatar: 'img/users/ryan.jpg',
+		posts: 375,
+		followers: 257, 
+		following: 739, 
+		follow: true
+	},
+	{
+		username: 'Ignacio Giri',
+		avatar: 'img/users/buzz.jpg',
+		posts: 2611,
+		followers: 893, 
+		following: 872, 
+		follow: true
+	},
+	{
+		username: 'Lauren Gray',
+		avatar: 'img/users/lauren.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 891, 
+		follow: true
+	},
+	{
+		username: 'Pallavi Gupta',
+		avatar: 'img/users/chloe.jpg',
+		posts: 1172,
+		followers: 2601, 
+		following: 881, 
+		follow: true
+	},
+	{
+		username: 'Ryan O. Hicks',
+		avatar: 'img/users/ryan.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 1902, 
+		follow: true
+	},
+	{
+		username: 'Vitor Leal',
+		avatar: 'img/users/vitor.jpg',
+		posts: 250,
+		followers: 153, 
+		following: 207, 
+		follow: true
+	},
+	{
+		username: 'Jonathan Moreira',
+		avatar: 'img/users/jonathan.jpg',
+		posts: 15320,
+		followers: 19820, 
+		following: 3493, 
+		follow: true
+	}				
+];
+
+
+var userFollowing = [
+	{
+		username: 'Samihah Azim',
+		avatar: 'img/users/meg.jpg',
+		posts: 12832,
+		followers: 18779, 
+		following: 5890, 
+		follow: true
+	},
+	{
+		username: 'Jon Brenne',
+		avatar: 'img/users/ryan.jpg',
+		posts: 375,
+		followers: 257, 
+		following: 739, 
+		follow: true
+	},
+	{
+		username: 'Ignacio Giri',
+		avatar: 'img/users/buzz.jpg',
+		posts: 2611,
+		followers: 893, 
+		following: 872, 
+		follow: true
+	},
+	{
+		username: 'Lauren Gray',
+		avatar: 'img/users/lauren.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 891, 
+		follow: true
+	},
+	{
+		username: 'Pallavi Gupta',
+		avatar: 'img/users/chloe.jpg',
+		posts: 1172,
+		followers: 2601, 
+		following: 881, 
+		follow: true
+	},
+	{
+		username: 'Ryan O. Hicks',
+		avatar: 'img/users/ryan.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 1902, 
+		follow: true
+	},
+	{
+		username: 'Vitor Leal',
+		avatar: 'img/users/vitor.jpg',
+		posts: 250,
+		followers: 153, 
+		following: 207, 
+		follow: true
+	},
+	{
+		username: 'Jonathan Moreira',
+		avatar: 'img/users/jonathan.jpg',
+		posts: 15320,
+		followers: 19820, 
+		following: 3493, 
+		follow: true
+	},
+	{
+		username: 'Samihah Azim',
+		avatar: 'img/users/meg.jpg',
+		posts: 12832,
+		followers: 18779, 
+		following: 5890, 
+		follow: true
+	},
+	{
+		username: 'Jon Brenne',
+		avatar: 'img/users/ryan.jpg',
+		posts: 375,
+		followers: 257, 
+		following: 739, 
+		follow: true
+	},
+	{
+		username: 'Ignacio Giri',
+		avatar: 'img/users/buzz.jpg',
+		posts: 2611,
+		followers: 893, 
+		following: 872, 
+		follow: true
+	},
+	{
+		username: 'Lauren Gray',
+		avatar: 'img/users/lauren.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 891, 
+		follow: true
+	},
+	{
+		username: 'Pallavi Gupta',
+		avatar: 'img/users/chloe.jpg',
+		posts: 1172,
+		followers: 2601, 
+		following: 881, 
+		follow: true
+	},
+	{
+		username: 'Ryan O. Hicks',
+		avatar: 'img/users/ryan.jpg',
+		posts: 662,
+		followers: 467, 
+		following: 1902, 
+		follow: true
+	},
+	{
+		username: 'Vitor Leal',
+		avatar: 'img/users/vitor.jpg',
+		posts: 250,
+		followers: 153, 
+		following: 207, 
+		follow: true
+	},
+	{
+		username: 'Jonathan Moreira',
+		avatar: 'img/users/jonathan.jpg',
+		posts: 15320,
+		followers: 19820, 
+		following: 3493, 
+		follow: true
+	}				
+];
+
 exports.getAllPosts = function(){
     return allPosts;
 };
@@ -225,15 +424,15 @@ exports.getUserFeed = function(){
 };
 
 exports.getUserFollowers = function(){
-    return allPosts;
+    return userFollowers;
 };
 
 exports.getUserFollowing = function(){
-    return allPosts;
+    return userFollowing;
 };
 
 exports.getUserSettings = function(){
-    return allPosts;
+    return userSettings;
 };
 
 function generateRandomTime() {

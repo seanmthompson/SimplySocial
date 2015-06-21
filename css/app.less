@@ -476,6 +476,49 @@ ul.unstyled {
 			}
 		}
 	}
+	
+	&.follower {
+		border: 0;
+		border-radius: 0;
+		margin: 0;
+		border-bottom: 1px solid @lightest-gray;
+		
+		.wrap {
+			padding: 25px 0;
+			
+			.username {
+				margin: 0 0 7px;
+			}
+			
+			.content {
+				margin-left: 15px;
+				width: auto;
+				
+				.follower-stats {
+					margin: 0;
+					color: @light-gray;
+					font-size: @font-size-xsmall;
+					
+					span {
+						display: inline-block;
+						margin: 0 15px 0 0; 
+					}
+				}
+			}
+			
+			.follow {
+				width: 30px;
+				height: 30px;
+				margin: 5px 0 0;
+				.border-radius;
+				line-height: 25px;
+				
+				&.following {
+					background: @base-green;
+				}
+			}
+		}
+	}
 }
 
 .photo-modal {	

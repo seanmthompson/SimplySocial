@@ -1,0 +1,21 @@
+<div>
+	<div class="status follower">
+		<div class="wrap">
+			<div class="pull-left">
+				<img class="avatar" ng-src="{{follower.avatar}}" width="40" />
+			</div>
+			<div class="content pull-left">
+				<p class="username title">{{ follower.username }}</p>
+				<p class="follower-stats">
+					<span>{{ follower.posts }} Posts</span>
+					<span>{{ follower.followers }} Followers</span>
+					<span>{{ follower.following }} Following</span>
+				</p>				
+			</div>
+			<div ng-class="{ 'following': follower.follow }" class="follow pull-right text-center">
+				<img src="img/assets/icons/checkmark.png" width="15" />
+			</div>
+			<div class="clearfix"></div>			
+		</div>	
+	</div>
+</div>

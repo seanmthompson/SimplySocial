@@ -1,14 +1,14 @@
 define([], function () {
-    var controllerName = 'ssUserProfileCtlr';
+    var controllerName = 'ssUserFollowersCtlr';
     var fn = function ($rootScope, $scope, $timeout, ssCommonService, ssDataService) {
-	    
-	    ssCommonService.showProgress();	    	    		
+	    	    
+	   	ssCommonService.showProgress();	    	    		
 		
 		$timeout(function() {
-		    ssDataService.getUserFeed().then(function(posts) {
-				$scope.posts = posts.data;
+		    ssDataService.getUserFollowers().then(function(followers) {
+				$scope.followers = followers.data;
 				ssCommonService.hideProgress();
-			});      
+			});	        
 	    }, ssCommonService.getRandomNumberInRange(200, 3000));
     };
 

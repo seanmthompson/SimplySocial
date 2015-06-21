@@ -57,6 +57,16 @@
 	            'directives/PhotoModal'
             ]),
             
+            followers: commonDirectives.concat([
+	            'controllers/UserFollowersCtrl',
+	            'directives/Follower',
+            ]),
+            
+            following: commonDirectives.concat([
+	            'controllers/UserFollowingCtrl',
+	            'directives/Follower',
+            ]),
+            
             feed: [
 	            'controllers/FeedCtrl'
             ],
@@ -161,7 +171,7 @@
 		});
 		
 		$stateProvider.state('index.user.followers', {
-		  templateUrl: '/partials/feed.html',
+		  templateUrl: '/partials/user.followers.html',
 		  url: '/followers',
 		  resolve: {
                 load: loadFn(dependencies.followers)
@@ -169,8 +179,8 @@
 		});
 		
 		$stateProvider.state('index.user.following', {
-		  templateUrl: '/partials/feed.html',
-		  url: '/followers',
+		  templateUrl: '/partials/user.following.html',
+		  url: '/following',
 		  resolve: {
                 load: loadFn(dependencies.following)
        	  }
