@@ -1,6 +1,6 @@
 define([], function () {
     var directiveName = 'ssStatusDir';
-    var fn = function (ssCommonService) {
+    var fn = function ($rootScope, ssCommonService) {
         return {
             restrict: 'C',
             replace: true,
@@ -16,6 +16,10 @@ define([], function () {
 	            $scope.fromNow = function(date) {
 					return ssCommonService.formatTime(date);
     			} 
+    			
+    			$scope.openPhotoModal = function(post) {
+	    			$rootScope.$broadcast('PhotoModal', post);
+    			}
             }
         }
     };

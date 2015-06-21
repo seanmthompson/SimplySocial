@@ -93,6 +93,19 @@ ul.unstyled {
 	margin: 0;
 }
 
+.btn {
+	padding: 8px 25px;
+	
+	&.btn-primary {
+		background: @base-green;
+		border: 0;
+	
+		&:hover {
+			background: @base-green;
+			opacity: 0.9;
+		}
+	}
+}
 
 //Nav
 .navbar-inverse {
@@ -105,13 +118,31 @@ ul.unstyled {
 		cursor: pointer;
 	}
 	
+	.form-group {
+		position: relative;
+		
+		input.form-control {
+			background: none;
+			border: 1px solid @medium-gray;
+			height: 30px;
+			margin-top: 7px;
+		}	
+		
+		.icon-search {
+			top: -4px;
+			right: 10px;
+			position: absolute;
+			cursor: pointer;	
+		}
+	}
+	
 	.user-dropdown {
 		position: relative;
 		padding-right: 20px;
 		cursor: pointer;
 		
 		.avatar {
-			padding: 12px 0 10px;
+			padding: 14px 0 10px;
 		}
 		
 		&:after {
@@ -133,20 +164,19 @@ ul.unstyled {
 			visibility: hidden;
 			position: absolute;
 			left: -25px;
-			top: 55px;
+			top: 53px;
 			width: 95px;
-			overflow: hidden;
 			.border-radius;
 			background: @off-white;
 			
 			li {
-				padding: 5px 20px;
+				padding: 7px 15px;
 				line-height: @font-size-base;
 				border-bottom: 1px solid @lightest-gray;
 				
 				a {					
 					color: @medium-gray;					
-					font-size: @font-size-small;															
+					font-size: @font-size-xsmall;															
 				}
 				
 				&:last-child { 
@@ -159,7 +189,7 @@ ul.unstyled {
 				.up-triangle(6px, @off-white);	
 				position: absolute;
 				top: -6px;
-				right: 15px;
+				right: 16px;
 			}
 		}
 	}
@@ -189,6 +219,10 @@ ul.unstyled {
 	}
 }
 
+
+.ss-page {
+	position: relative;
+}
 
 // Index
 .index-ui-view {
@@ -333,7 +367,7 @@ ul.unstyled {
 			.status-text {
 				margin: 0;
 			}			
-		}
+		}				
 		
 		.comments-link {
 			font-size: @font-size-xsmall;
@@ -358,6 +392,10 @@ ul.unstyled {
 				.up-triangle(5px, @light-gray)
 			}
 		}
+	}
+	
+	.attachment {
+		cursor: pointer;
 	}
 	
 	.comments-wrap {
@@ -400,7 +438,83 @@ ul.unstyled {
 	}
 }
 
-// Loader overrides for ngLoader
-.loader {
-	background: none !important;
+.photo-modal {	
+	.modal {
+		.modal-dialog {
+			margin-top: 100px;
+			
+			.close-modal {
+				position: absolute;
+				top: -20px;
+				cursor: pointer;
+				right: -20px;
+			}
+			
+			.modal-content {
+				
+				.modal-body {
+					border: 0;
+					margin-top: 0;
+					padding: 0;
+					overflow: hidden;
+					position: relative;										
+					
+					p.title {
+						margin: 0 0 5px;
+					}
+					
+					img.attachment {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.add-comment-modal {
+	.modal {
+		.modal-dialog {
+			width: 575px;
+			
+			.comments-wrap {
+					padding: 15px 25px;
+			}
+			
+			.title {
+				font-weight: @font-weight-light;
+				color: @medium-gray;
+			}
+			
+			textarea {
+				width: 100%;
+				min-height: 90px;
+				margin: 15px 0 10px;
+				border: 0;
+				resize: none;
+			}				
+			
+			.actions {
+				margin: 10px 0 0;
+				img, p {
+					color: @medium-gray;
+					display: inline-block;
+					margin-right: 10px;
+					font-weight: @font-weight-light;
+					font-size: @font-size-small;
+				}
+			}
+			
+			.add-photo, .add-video {
+				margin-right: 15px;
+				opacity: 0.5;
+			}
+	
+		}	
+	}
+}
+
+.modal-backdrop.in {
+	opacity: 0.8;
 }

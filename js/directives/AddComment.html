@@ -1,29 +1,27 @@
-<div>
+<div class="add-comment-modal photo-modal">
 	<div class="modal fade">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog modal-sm">
+			<img src="img/assets/icons/close-modal.png" alt="close modal" width="21" class="close-modal" data-dismiss="modal" />
 			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-						&times;
-					</button>
-					<h4 class="modal-title">Lorem Ipsum</h4>
-				</div>
-				<div class="modal-body">
-                    <p>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mauris ut ex rutrum bibendum. Duis faucibus purus molestie nibh ultrices, eu euismod magna vehicula. Suspendisse dignissim egestas laoreet. Proin ut venenatis elit. Nullam commodo, lorem a laoreet consequat, lacus ante viverra nulla, nec sodales odio felis nec ipsum. Praesent lacus urna, varius quis mollis non, lacinia quis mauris. Aenean risus quam, placerat quis tortor id, cursus elementum ligula. Duis luctus varius orci, a commodo augue accumsan in.
-
-Pellentesque tincidunt nisi sed enim convallis, sollicitudin imperdiet neque ornare. Nulla sit amet ullamcorper nisi. Sed eget malesuada velit, nec dapibus mauris. Mauris feugiat posuere massa, nec luctus massa aliquet non. Quisque in molestie eros, scelerisque faucibus nunc. Phasellus luctus nisi lacus, ut vulputate neque posuere eget. Praesent rutrum volutpat ligula, eu maximus urna finibus at. Quisque a purus sed ante consectetur pellentesque. Nam mauris metus, blandit in quam id, bibendum fermentum massa. Donec lorem ligula, luctus quis tincidunt vulputate, vestibulum nec felis.
-
-Curabitur nisi ligula, hendrerit eu venenatis eget, ultrices facilisis erat. In vitae mi et erat porta sodales. Curabitur imperdiet egestas velit, vitae viverra ex sagittis eget. Ut accumsan posuere tortor, in facilisis tortor interdum et. Curabitur lacus nunc, sodales tincidunt risus a, accumsan pharetra ex. Aliquam erat volutpat. Vivamus mattis, odio quis semper commodo, nisi ipsum dictum purus, non faucibus mauris sem vitae erat. Vivamus suscipit tristique lorem. Nullam venenatis mattis erat non auctor. Sed eleifend dolor purus, at pharetra risus dignissim ac. Nullam sapien turpis, porttitor sit amet egestas eget, elementum at turpis. Aliquam et sem arcu. Vivamus tristique finibus erat vel elementum. Donec ac ex et eros congue ullamcorper sagittis ut neque. Sed at bibendum ex.
-
-Fusce metus augue, blandit in scelerisque eget, finibus eu risus. Suspendisse et massa at massa semper mattis a id quam. Aliquam nec magna ut tortor laoreet hendrerit id non erat. Curabitur ornare venenatis erat id finibus. Integer egestas, nisl eu feugiat egestas, erat nisi vestibulum sem, at tincidunt sem mi vel quam. Vivamus vel justo aliquam, tempor ipsum quis, efficitur sapien. In tempus sit amet ligula nec tincidunt. Nunc at vulputate neque. Quisque sodales maximus neque id vehicula. Maecenas scelerisque erat sit amet felis efficitur, et malesuada risus pharetra. Vestibulum sit amet eros ipsum. Vivamus iaculis nisi et lorem rhoncus, nec accumsan ante vehicula. Morbi aliquet varius arcu ac ornare. Integer ultricies erat a odio mattis, at dignissim massa lobortis.
-
-Donec luctus, erat quis tempor accumsan, diam nunc maximus enim, sit amet ornare tortor erat non purus. Donec nibh odio, auctor et sollicitudin nec, dignissim sed nibh. Nam urna erat, gravida quis suscipit vitae, sagittis sit amet erat. Sed eu sapien leo. Aliquam erat volutpat. Praesent suscipit dolor vitae vulputate ultrices. Morbi vel luctus est, a sollicitudin neque. Nulla porta mi vel aliquam pretium. Suspendisse blandit mollis eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum dictum egestas vestibulum. </p>
-				</div>
-				<!-- modal body -->
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<div class="modal-body status">					
+					<div class="comments-wrap reply-wrap">
+						<p class="title">Create new message</p>												
+						<div class="status-update">
+							<textarea autofocus class="add-comment-textbox"></textarea>
+							<div class="actions pull-left">
+								<div class="add-photo pull-left">
+									<img src="img/assets/icons/photo-gray.png" width="16" />
+									<p>Add Photo</p>
+								</div>
+								<div class="add-video pull-left">
+									<img src="img/assets/icons/video-gray.png" width="16" />
+									<p>Add Video</p>
+								</div>								
+							</div>
+							<a class="btn btn-primary pull-right" href="#">Post</a>
+							<div class="clearfix"></div>
+						</div>												
+					</div>
 				</div>
 			</div>
 		</div>

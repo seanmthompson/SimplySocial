@@ -64,12 +64,15 @@
             posts: [
 	            'controllers/PostCtrl',
             	'directives/Posts',
-            	'directives/Status'
+            	'directives/Status',
+            	'directives/PhotoModal'
             ],
 
 			photos: [
 	            'controllers/PhotosCtrl',
-	            'directives/Photos'
+	            'directives/Photos',
+	            'directives/Photo',
+	            'directives/PhotoModal'
             ]
             
         };

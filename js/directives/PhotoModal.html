@@ -1,0 +1,32 @@
+<div class="photo-modal">
+	<div class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<img src="img/assets/icons/close-modal.png" width="21" class="close-modal" data-dismiss="modal" />
+			<div class="modal-content">
+				<div class="modal-body status">					
+                	<img class="attachment" ng-src="{{ post.attachment }}" />
+                	<div class="wrap">
+						<div class="pull-left">
+							<img class="avatar" ng-src="{{post.userAvatar}}" width="40" />
+						</div>	
+						<div class="content pull-right">
+							<p class="pull-left title username">{{ post.userName }}</p>
+							<div class="actions pull-right text-right">
+								<p class="pull-right small">{{ fromNow(post.timeCreated) }}</p>
+								<img class="pull-right" src="img/assets/icons/like.png" width="13" />
+								<img class="pull-right" src="img/assets/icons/reply.png" width="13" />														
+							</div>	
+							<div class="clearfix"></div>
+							<p class="status-text" ng-bind-html="post.status"></p>
+							<p class="small comments-link" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">Collapse<p>	
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="comments-wrap reply-wrap">
+						<input type="text" class="reply-input" placeholder="Reply..." />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

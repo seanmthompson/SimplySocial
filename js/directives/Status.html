@@ -16,7 +16,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<img class="attachment img-responsive" ng-if="post.attachment" ng-src="{{post.attachment}}" />	
+	<img class="attachment img-responsive" ng-if="post.attachment" ng-click="openPhotoModal(post)" ng-src="{{post.attachment}}" />	
 	
 	<div class="comments-wrap" ng-show="expandComments" ng-if="post.comments.length">
 		<div class="comment" ng-repeat="comment in post.comments">
