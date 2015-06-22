@@ -7,7 +7,6 @@ define([], function () {
             scope: {},
             templateUrl: 'js/directives/Footer.html',
             link: function ($scope, element, attrs) {
-				console.log('FOoter directive loaded');
             }
         }
     };

@@ -94,10 +94,7 @@
 
         var loadFn = function (dependencies) {
             return ['$q', '$rootScope', 'ssCommonService',
-                function ($q, $rootScope, ssCommonService) {
-	                console.log('in load fn ' + dependencies);
-	                
-	                //ssCommonService.showProgress();	                
+                function ($q, $rootScope, ssCommonService) {	                
 	                	                	                
                     var dependenciesLoaded = false;
 
