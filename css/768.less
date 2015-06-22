@@ -1,15 +1,30 @@
 @media (max-width: 768px) {
 	.navbar-inverse {
 		.navbar-header {
-			.navbar-brand {
-				display: block;
-				width: 100%;
-				text-align: center;
+			float: left;			
+		}
+	}
+	
+	.hero .hero-nav-container .hero-nav ul li {
+		margin: 10px 0 0; 
+	}
+	
+	.add-comment-modal .modal .modal-dialog, .photo-modal .modal .modal-dialog {
+		margin: 50px 22px;
+		width: auto;
+	}
+	
+	.status.follower {
+		.wrap {
+			.content {
+				width: -webkit-calc(~"100% - 100px");
+				width: -moz-calc(~"100% - 100px");
+				width: calc(~"100% - 100px");
 				
-				img {
-					margin: auto;
+				.follower-stats span {
+					display: block;
 				}
-			}			
+			}
 		}
 	}
 }

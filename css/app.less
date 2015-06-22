@@ -242,6 +242,7 @@ ul.unstyled {
 		position: relative;
 		padding-right: 20px;
 		cursor: pointer;
+		z-index: 999;
 		
 		.avatar {
 			padding: 14px 0 10px;
@@ -454,6 +455,10 @@ ul.unstyled {
 			}
 		}
 	}	
+}
+
+.ss-posts-dir {
+	height: auto !important; // weird bug on mobile
 }
 
 // Status box
@@ -791,3 +796,4 @@ ul.unstyled {
 
 //Import responsive style sheets
 @import "768.less";
+@import "480.less";
