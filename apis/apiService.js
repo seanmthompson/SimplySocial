@@ -415,17 +415,13 @@ var userSettings = {
 		postsMarkedAsFavorite: true,
 		emailWhenMentioned: true,
 		emailMeWhenReply: true,
-		emailWhenFollow: true
+		emailWhenFollow: false
 	},
 	privacy: {
-		tags: {
-			anyone: true,
-			followers: false,
-			anyone: false
-		},
-		locations: true,
-		findMeByEmail: true,
-		tailorAds: true
+		tags: 0,
+		locations: 'true',
+		findMeByEmail: 'true',
+		tailorAds: 'true'
 		
 	}
 }

@@ -24,6 +24,77 @@
 				<div class="clearfix"></div>
 			</div>
 			
+			<div class="account-settings">
+				<div class="col-sm-12">	
+					<h3>Notifications</h3>
+				</div>	
+				<div class="col-sm-12">
+					<label class="switch"><input type="checkbox" ng-model="settings.notifications.postsMarkedAsFavorite"><i></i>
+						<span class="text">email me when my posts are marked as favorites</span>
+					</label>
+					
+					<label class="switch"><input type="checkbox" ng-model="settings.notifications.emailWhenMentioned"><i></i>
+						<span class="text">email me when I’m mentioned</span>
+					</label>
+					
+					<label class="switch"><input type="checkbox" ng-model="settings.notifications.emailMeWhenReply"><i></i>
+						<span class="text">email me when I get a reply</span>
+					</label>
+					
+					<label class="switch"><input type="checkbox" ng-model="settings.notifications.emailWhenFollow"><i></i>
+						<span class="text">email me when someone follows me</span>
+					</label>								
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div class="account-settings">
+				<div class="col-sm-12">	
+					<h3>Privacy</h3>
+				</div>	
+				<div class="col-sm-12">
+					<form>
+						<div class="radio">
+							<input type="radio" id="anyone" value="0" ng-model="settings.privacy.tags" name="radio" />
+							<label for="anyone"><span></span>allow anyone to tag me</label>
+						</div>
+						
+						<div class="radio">
+							<input type="radio" id="followers" value="1" ng-model="settings.privacy.tags"  name="radio" />
+							<label for="followers"><span></span>only allow people I follow to tag me</label>
+						</div>	
+						
+						<div class="radio">
+							<input type="radio" id="nobody" value="2" ng-model="settings.privacy.tags" name="radio" />
+							<label for="nobody"><span></span>don’t allow anyone to tag me</label>
+						</div>	
+					</form>								
+				</div>
+
+				<div class="col-sm-12 preferences">				
+					<form>
+						<div class="radio">
+							<input type="radio" id="locations" checked name="radio" />
+							<label for="locations"><span></span>add a  location to my posts</label>
+						</div>	
+						
+						<div class="radio">
+							<input type="radio" id="findMeByEmail" name="radio" />
+							<label for="findMeByEmail"><span></span>let others find me by my email address</label>
+						</div>	
+						
+						<div class="radio">
+							<input type="radio" id="tailorAds" name="radio" />
+							<label for="tailorAds"><span></span>tailor ads based on my information</label>
+						</div>	
+					</form>	
+				</div>
+				
+				<div class="clearfix"></div>
+			</div>
+			
+			<a class="btn btn-secondary btn-large">Save Changes</a>
+			
 		</div>
 	</div>
 </div>
