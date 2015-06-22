@@ -12,7 +12,7 @@
 	</div>
 	<img class="attachment img-responsive" ng-click="openPhotoModal(post)" ng-if="post.attachment" ng-src="{{post.attachment}}" />	
 	<div class="actions text-right">
-		<p class="small comments-link pull-left" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">Collapse<p>
+		<p class="small comments-link pull-left" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">{{ commentText }}<p>
 		<p class="pull-right small">{{ fromNow(post.timeCreated) }}</p>
 		<img class="pull-right" src="img/assets/icons/like.png" width="13" />
 		<img class="pull-right" src="img/assets/icons/reply.png" width="13" />	

@@ -9,9 +9,17 @@ define([], function () {
             link: function ($scope, element, attrs) {
 	            $scope.expandComments = false;
 	            
+	            $scope.commentText = "Expand";
+	            
 	            $scope.toggleComments = function() {
 		           $scope.expandComments = !$scope.expandComments; 
 		           $scope.$emit('isoRelayout');
+		           
+		           if($scope.expandComments) {
+			          $scope.commentText = "Collapse"; 
+		           } else {
+			           $scope.commentText = "Expand"; 
+		           }
 	            }
 	            
 	            $scope.fromNow = function(date) {

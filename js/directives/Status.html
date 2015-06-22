@@ -15,7 +15,7 @@
 			<p class="like" ng-if="post.liked">
 				<img src="img/assets/icons/heart.png" width="13" /> Liked				
 			</p>
-			<p class="small comments-link" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">Collapse<p>	
+			<p class="small comments-link" ng-class="{'active':expandComments}" ng-click="toggleComments()"; ng-if="post.comments.length">{{ commentText }}<p>	
 		</div>
 		<div class="clearfix"></div>
 	</div>
